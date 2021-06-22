@@ -8,12 +8,9 @@ const VideoItem = (props) => {
       onClick={(e) => props.onVideoSelect(props.video)}
       className="video-item item"
     >
-      <img className="ui image" src={url}></img>
+      <img alt={props.video.snippet.title} className="ui image" src={url}></img>
       <div className="content">
         <a className="header">{props.video.snippet.title}</a>
-        <div className="description">
-          {props.video.snippet.description.slice(0, 100)}...
-        </div>
       </div>
     </div>
   );
